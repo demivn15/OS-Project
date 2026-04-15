@@ -8,7 +8,7 @@ def main():
     else:
         role = sys.argv[1]
     print(f"--- Starting {role} Node ---")
-    startNode(role) 
+    startNode(role, role) 
 
 if __name__ == "__main__":
     main()

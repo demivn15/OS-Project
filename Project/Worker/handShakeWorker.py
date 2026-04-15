@@ -2,9 +2,9 @@ import socket
 import pickle
 import os
 
-def sendWorkerHandshake(s):
+def sendWorkerHandshake(s, role):
     handshakePacket = {
-        "role": "worker", 
+        "role": role, 
         "cores": os.cpu_count(),
         "msg": "Requesting instructions"
     }
