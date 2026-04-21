@@ -6,7 +6,7 @@ def preparePacket(dataObject):
     header = struct.pack('I', len(payload))
     return header + payload
 
-def receive_packet(sock):
+def receivePacket(sock):
     header = sock.recv(4)
     if not header:
         return None

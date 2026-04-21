@@ -4,7 +4,9 @@ from startConnectionMaster import startMaster
 
 def main():
     print("--- Starting Master Orchestrator ---")
-    startMaster()
+    nodeRegistry = startMaster()
+    print("--- Starting Image Distribution ---")
+    startDistribution(nodeRegistry, "test_image.jpg")
 
 if __name__ == "__main__":
     main()
